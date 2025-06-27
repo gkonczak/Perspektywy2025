@@ -5,7 +5,7 @@ title: "Podsumowanie"
 Ranking Perpektywy 2025
 
 Tabela. Zysk punktowy w Rankingu przy poprawie naszej punktacji w danej kategorii o 10% lub 50%.
-
+ **(Rozwinąć tabelę klikając po prawej stronie)**
 
 
 ```{r}
