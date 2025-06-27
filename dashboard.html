@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Podsumowanie – Perspektywy2025</title>
+<title>dashboard – Perspektywy2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-f29aaeecf1a46d890de4f9c541966cf8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="site_libs/quarto-dashboard/stickythead.js"></script>
+<script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="site_libs/quarto-dashboard/components.js"></script>
+<link href="site_libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,10 +76,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="quarto-dashboard nav-fixed dashboard-fill fullcontent">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Wykres</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dashboard.html"> 
+    <a class="nav-link active" href="./dashboard.html" aria-current="page"> 
 <span class="menu-text">Ranking</span></a>
   </li>  
   <li class="nav-item">
@@ -109,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Ekonomiczne</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./podsumowanie.html" aria-current="page"> 
+    <a class="nav-link" href="./podsumowanie.html"> 
 <span class="menu-text">Podsumowanie</span></a>
   </li>  
   <li class="nav-item">
@@ -122,251 +130,77 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-</header>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler hidden" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+</div></nav>
+</header></header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Podsumowanie</h1>
+<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset bslib-card html-fill-container" data-title="Kategoria (Uczelnie 1:25 plus ekonomiczne)" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header bslib-navs-card-title"><div class="card-title"><span style="display: inline">
+Kategoria (Uczelnie 1:25 plus ekonomiczne)
+</span></div><ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-1"><li class="nav-item" role="presentation"><a href="#card-tabset-1-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Prestiż" aria-selected="true" class="nav-link active">Prestiż</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Absolwenci na rynku pracy" aria-selected="false" class="nav-link">Absolwenci na rynku pracy</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-3" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Potencjał naukowy" aria-selected="false" class="nav-link">Potencjał naukowy</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-4" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Innowacyjność" aria-selected="false" class="nav-link">Innowacyjność</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-5" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Efektywność naukowa" aria-selected="false" class="nav-link">Efektywność naukowa</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-6" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Warunki kształcenia" aria-selected="false" class="nav-link">Warunki kształcenia</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-7" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="Umiędzynarodowienie" aria-selected="false" class="nav-link">Umiędzynarodowienie</a></li></ul></div>
+
+
+
+
+
+
+
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden">
+
+</div>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-1"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-1"><div class="card-body html-fill-item html-fill-container" data-title="Prestiż">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-2"><div class="card-body html-fill-item html-fill-container" data-title="Absolwenci na rynku pracy">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-3"><div class="card-body html-fill-item html-fill-container" data-title="Potencjał naukowy">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-4"><div class="card-body html-fill-item html-fill-container" data-title="Innowacyjność">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-5"><div class="card-body html-fill-item html-fill-container" data-title="Efektywność naukowa">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-6"><div class="card-body html-fill-item html-fill-container" data-title="Warunki kształcenia">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-7"><div class="card-body html-fill-item html-fill-container" data-title="Umiędzynarodowienie">
+<div class="cell-output-display html-fill-item html-fill-container">
+<img src="dashboard_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-dashboard-img-contain">
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Ranking Perpektywy 2025</p>
-<p>Tabela. Zysk punktowy w Rankingu przy poprawie naszej punktacji w danej kategorii o 10% lub 50%. <strong>(Rozwinąć tabelę klikając po prawej stronie)</strong></p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 75%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Zmienna</th>
-<th style="text-align: right;">Wzrost o 10%</th>
-<th style="text-align: right;">Wzrost o 50%</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Ocena przez kadrę akademicką</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">0.31</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Uznanie międzynarodowe</td>
-<td style="text-align: right;">0.02</td>
-<td style="text-align: right;">0.10</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Wynagrodzenie absolwentów</td>
-<td style="text-align: right;">0.39</td>
-<td style="text-align: right;">1.95</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Zatrudnienie absolwentów</td>
-<td style="text-align: right;">0.44</td>
-<td style="text-align: right;">2.22</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ocena parametryczna</td>
-<td style="text-align: right;">0.46</td>
-<td style="text-align: right;">2.29</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Nasycenie kadry osobami o najwyższych kwalifikacjach</td>
-<td style="text-align: right;">0.12</td>
-<td style="text-align: right;">0.61</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Uprawnienia habilitacyjne i doktorskie</td>
-<td style="text-align: right;">0.01</td>
-<td style="text-align: right;">0.04</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Kształcenie doktorantów</td>
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0.51</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Patenty, prawa ochronne w Polsce</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Patenty, prawa ochronne za granicą</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">SDG</td>
-<td style="text-align: right;">0.11</td>
-<td style="text-align: right;">0.57</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Efektywność pozyskiwania zewnętrznych środków finansowych na badania i rozwój</td>
-<td style="text-align: right;">0.24</td>
-<td style="text-align: right;">1.18</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Efektywność pozyskiwania zewnętrznych środków z programów UE</td>
-<td style="text-align: right;">0.12</td>
-<td style="text-align: right;">0.60</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Rozwój kadry własnej</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">0.31</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Nadane stopnie i tytuły naukowe</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">0.37</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Publikacje</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">0.32</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">FWCI</td>
-<td style="text-align: right;">0.22</td>
-<td style="text-align: right;">1.12</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">FWVI</td>
-<td style="text-align: right;">0.12</td>
-<td style="text-align: right;">0.61</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">TOP 10</td>
-<td style="text-align: right;">0.17</td>
-<td style="text-align: right;">0.84</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Dostępność dla studentów kadr wysoko-kwalifikowanych</td>
-<td style="text-align: right;">0.16</td>
-<td style="text-align: right;">0.80</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Akredytacje</td>
-<td style="text-align: right;">0.12</td>
-<td style="text-align: right;">0.62</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Studenci cudzoziemcy</td>
-<td style="text-align: right;">0.03</td>
-<td style="text-align: right;">0.15</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Studiujący w językach obcych</td>
-<td style="text-align: right;">0.08</td>
-<td style="text-align: right;">0.40</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">ICI</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">0.35</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Uniwersytety europejskie</td>
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0.50</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Nauczyciele akademiccy z zagranicy</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Wymiana kadry</td>
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0.50</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Wymiana studencka - wyjazdy</td>
-<td style="text-align: right;">0.05</td>
-<td style="text-align: right;">0.25</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Wymiana studencka - przyjazdy</td>
-<td style="text-align: right;">0.03</td>
-<td style="text-align: right;">0.17</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Wielokulturowość środowiska studenckiego</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.01</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Suma</td>
-<td style="text-align: right;">3.54</td>
-<td style="text-align: right;">17.68</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><strong>Wyjaśnienie:</strong> dla zmiennej <strong>Nadane stopnie i tytuły naukowe</strong></p>
-<p>Jeśli np. nadanych zostało 7 stopni doktora (7p) i 2 stopnie dra hab. (3p), to wzrost o 10% oznacza nadanie np. 11 stopni doktora (ewentualnie np. .8 stopni doktora i 2 stopni dra hab.).</p>
-<p><br></p>
-<p><strong>Dane z Komitetów Naukowych:</strong></p>
-<p><strong>Rok 2023:</strong> habilitacje: 1 (1,5p), doktoraty: 19 (19p). Liczba punktów: 20,5.</p>
-<p><strong>Rok 2024:</strong> habilitacje: 0, doktoraty: 18. Liczba punktów: 18.</p>
-<p><strong>Rok 2025:</strong> (przewidywane): habilitacje: 4, doktoraty: 10. Liczba punktów: 16.</p>
-<p>Co dałoby spadek w tej kategorii (2025 do 2024) o ok. 11%</p>
-<p><br></p>
-<p><br></p>
-<p>Elastyczność</p>
-<p>Zwiększamy naszą punktację (efekty) w danej kategorii o x % (10 lub 50) – jaki jest zysk w finalnej punktacji (wpływa na to aktualna liczba punktów oraz waga kategorii).</p>
-<hr>
-<p>Najbardziej „zyskowne”</p>
-<p><strong>Ocena parametryczna</strong></p>
-<p>&nbsp;– wzrost o 10% daje nam zwiększenie punktacji o 0,46, a wzrost o 50% aż o 2,29p.</p>
-<p><strong>Zatrudnienie absolwentów</strong></p>
-<p>– wzrost o 10% daje nam zwiększenie punktacji o 0,44, a wzrost o 50% aż o 2,22p.</p>
-<p><strong>Wynagrodzenia absolwentów</strong></p>
-<p>– wzrost o 10% daje nam zwiększenie punktacji o 0,39, a wzrost o 50% o 1,95p.</p>
-<p>Stosunkowo zyskowne są dla nas jeszcze następujące kategorie (powyżej 0,1 pkt. za wzrost o 10%):</p>
-<p><strong>Efektywność pozyskiwania zewnętrznych środków finansowych na badania i rozwój</strong> (zysk 0,24)</p>
-<p><strong>Nasycenie kadry osobami o najwyższych kwalifikacjach</strong> (0,12)</p>
-<p><strong>Efektywność pozyskiwania zewnętrznych środków z programów UE</strong> (zysk 0,12)</p>
-<p><strong>Nadane stopnie i tytuły</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0,109)</p>
-<p><strong>FWCI</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0,22)</p>
-<p><strong>FWVI</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0,12)</p>
-<p><strong>Top10</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0,17)</p>
-<p><strong>Dostępność dla studentów</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0,16)</p>
-<p><strong>Akredytacje</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (0,12)</p>
-<p>Warto zauważyć, że większość powyższych kategorii jest związana z nauką, publikacjami, grantami. To w pewnej mierze sprzedaż wiązana. Pozyskujemy granty, są publikacje, są cytowania itd. Zyskujemy jednocześnie w wielu kategoriach.</p>
-<p>Wzrost w każdej kategorii o 10% daje nam 3,54 punktu. Dałoby to aktualnie miejsce 48.</p>
-<p>Wzrost w każdej kategorii o 50% daje nam 17,68 pkt. Dałoby to aktualnie miejsce 19.</p>
-<p>Na niektóre ze zmiennych nie mamy aktualnie wpływu (np. <strong>Ewaluacja działalności naukowej</strong>). Za rok jeszcze (?) punkty będą takie same. Podobnie <strong>Uprawnienia habilitacyjne i doktorskie.</strong></p>
-<p><strong>Wynagrodzenia</strong> i <strong>Zatrudnienie</strong> absolwentów to efekt naszej pracy, ale jednak pośredni i opóźniony.</p>
-<p><strong>Do miejsca 50. brakuje nam 1,2 pkt.</strong> Wzrosty w każdej kategorii o ok. 2% dawałby 50 miejsce.</p>
-
-
-
-</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -789,6 +623,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
 
 
 
