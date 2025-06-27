@@ -1,0 +1,52 @@
+---
+title: "Lista"
+format: 
+  dashboard:
+    orientation: columns
+---
+
+```{r}
+#| echo: false
+#| include: false
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+```
+
+```{r}
+#| echo: false
+dane=read_excel("p_2025.xlsx",sheet="2025")
+d1=dane %>% 
+  filter(ind=="UE")
+dane$Uczelnia <- factor(dane$Uczelnia, levels = dane$Uczelnia[order(dane$Rank_25)])
+```
+
+
+
+
+```{r}
+#| echo: false
+# df <- as.data.frame(dane)
+# library(gt)
+# gt(df[,c(3,41:60)]) %>%
+#   tab_options(container.width = pct(100))
+```
+
+
+
+
+
+```{r}
+#| echo: false
+# library(DT)
+# df <- as.data.frame(dane)
+# datatable(df[,c(3,41:60)], options = list(scrollX = TRUE, width = "100%"))
+```
+
+
+
+```{r}
+df <- as.data.frame(dane)
+kable(df[,c(1,3,9,41:51)],format = "html", table.attr = "style='width:100%;'")
+```
+

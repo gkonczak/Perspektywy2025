@@ -1,0 +1,329 @@
+---
+format: 
+  dashboard:
+    orientation: columns
+---
+
+### Row {.tabset title="Kategoria (Uczelnie 1:25 plus ekonomiczne)"}
+
+```{r}
+#| echo: false
+#| include: false
+library(readxl)
+library(tidyverse)
+library(patchwork)
+```
+
+```{r}
+#| echo: false
+#| include: false
+dane=read_excel("p_2025.xlsx",sheet="2025")
+dane$Uczelnia <- factor(dane$Uczelnia, levels = dane$Uczelnia[order(dane$Rank_25)])
+
+d1=dane %>% 
+  filter(ind=="UE")
+
+
+dane2=dane[c(1:36,41,43,44,58),]
+nazwy=names(d1)
+```
+
+
+
+```{r}
+#| title: Prestiż
+#| fig-width: 12
+nazwa=nazwy[10]
+p1=ggplot(dane2, aes(x = Uczelnia, y = v1, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+
+
+nazwa=nazwy[11]
+p2=ggplot(dane2, aes(x = Uczelnia, y = v2, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+p1+p2
+
+```
+
+
+```{r}
+#| title: Absolwenci na rynku pracy
+#| fig-width: 12
+nazwa=nazwy[12]
+p1=ggplot(dane2, aes(x = Uczelnia, y = v3, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[13]
+p2=ggplot(dane2, aes(x = Uczelnia, y = v4, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+p1+p2
+
+```
+
+
+```{r}
+#| title: Potencjał naukowy
+#| fig-width: 14
+
+nazwa=nazwy[14]
+p1=ggplot(dane2, aes(x = Uczelnia, y = v5, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  labs(x="",y=nazwa)+
+  theme(axis.text.y = element_text(size = 4))+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[15]
+p2=ggplot(dane2, aes(x = Uczelnia, y = v6, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[16]
+p3=ggplot(dane2, aes(x = Uczelnia, y = v7, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[17]
+p4=ggplot(dane2, aes(x = Uczelnia, y = v8, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+(p1+p2)/(p3+p4)
+
+```
+
+
+
+```{r}
+#| title: Innowacyjność
+#| fig-width: 14
+nazwa=nazwy[18]
+p1=ggplot(dane2, aes(x = Uczelnia, y = v9, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[19]
+p2=ggplot(dane2, aes(x = Uczelnia, y = v10, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[20]
+p3=ggplot(dane2, aes(x = Uczelnia, y = v11, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+p1+p2+p3
+```
+
+
+```{r}
+#| title: Efektywność naukowa
+#| fig-width: 12
+nazwa=nazwy[21]
+p1=ggplot(dane2, aes(x = Uczelnia, y = v12, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[22]
+p2=ggplot(dane2, aes(x = Uczelnia, y = v13, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[23]
+p3=ggplot(dane2, aes(x = Uczelnia, y = v14, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[24]
+p4=ggplot(dane2, aes(x = Uczelnia, y = v15, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[25]
+p5=ggplot(dane2, aes(x = Uczelnia, y = v16, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[26]
+p6=ggplot(dane2, aes(x = Uczelnia, y = v17, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[27]
+p7=ggplot(dane2, aes(x = Uczelnia, y = v18, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[28]
+p8=ggplot(dane2, aes(x = Uczelnia, y = v19, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+
+
+(p1+p2)/(p3+p4+p5)/(p6+p7+p8)
+```
+
+
+```{r}
+#| title: Warunki kształcenia
+#| fig-width: 12
+
+nazwa=nazwy[29]
+p1=ggplot(dane2, aes(x = Uczelnia, y = v20, fill = kolor)) +
+  geom_bar(stat = "identity") +
+      theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[30]
+p2=ggplot(dane2, aes(x = Uczelnia, y = v21, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+
+p1+p2
+
+```
+
+
+```{r}
+#| title: Umiędzynarodowienie
+#| fig-width: 12
+
+
+
+nazwa=nazwy[31]
+p1=ggplot(dane2, aes(x = Uczelnia, y = v22, fill = kolor)) +
+  geom_bar(stat = "identity") +
+    theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[32]
+p2=ggplot(dane2, aes(x = Uczelnia, y = v23, fill = kolor)) +
+  geom_bar(stat = "identity") +
+    theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[33]
+p3=ggplot(dane2, aes(x = Uczelnia, y = v24, fill = kolor)) +
+  geom_bar(stat = "identity") +
+    theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[34]
+p4=ggplot(dane2, aes(x = Uczelnia, y = v25, fill = kolor)) +
+  geom_bar(stat = "identity") +
+    theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[35]
+p5=ggplot(dane2, aes(x = Uczelnia, y = v26, fill = kolor)) +
+  geom_bar(stat = "identity") +
+    theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[36]
+p6=ggplot(dane2, aes(x = Uczelnia, y = v27, fill = kolor)) +
+  geom_bar(stat = "identity") +
+    theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[37]
+p7=ggplot(dane2, aes(x = Uczelnia, y = v28, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[38]
+p8=ggplot(dane2, aes(x = Uczelnia, y = v29, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+nazwa=nazwy[39]
+p9=ggplot(dane2, aes(x = Uczelnia, y = v30, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.y = element_text(size = 4))+
+  labs(x="",y=nazwa)+
+  scale_fill_identity()+
+  coord_flip()
+
+(p1+p2+p3)/(p4+p5+p6)/(p7+p8+p9)
+```

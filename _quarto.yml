@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "Perspektywy2024"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Wprowadzenie
+      - href: lista.qmd
+        text: Lista
+      - href: wykres.qmd
+        text: Wykres
+      - href: dashboard.qmd
+        text: Ranking
+      - href: ue.qmd
+        text: Ekonomiczne
+      - href: podsumowanie.qmd
+        text: Podsumowanie
+      - href: about.qmd
+        text: O...
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+
+
+

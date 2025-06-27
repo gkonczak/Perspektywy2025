@@ -1,0 +1,102 @@
+---
+title: "analiza"
+format: 
+  dashboard: 
+      orientation: columns
+---
+
+## Row
+
+```{r}
+#| component: valuebox
+list(title="v1",value="24", color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(title="v2",value="24", color="blue")
+```
+
+```{r}
+#| component: valuebox
+list(  title="v3",  value="24",  color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(  title="v4",  value="24",  color="blue")
+```
+
+```{r}
+#| component: valuebox
+x=37
+list(title="v5",value=x, color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(title="v6",value="24", color="blue")
+```
+
+```{r}
+#| component: valuebox
+list(  title="v7",  value="24",  color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(  title="v8",  value="24",  color="blue")
+```
+
+
+## Row
+
+```{r}
+#| component: valuebox
+list(title="v11",value="24", color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(title="v12",value="24", color="blue")
+```
+
+```{r}
+#| component: valuebox
+list(  title="v13",  value="24",  color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(  title="v14",  value="24",  color="blue")
+```
+
+```{r}
+#| component: valuebox
+x=37
+list(title="v15",value=x, color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(title="v16",value="24", color="blue")
+```
+
+```{r}
+#| component: valuebox
+list(  title="v17",  value="24",  color="red")
+```
+
+
+```{r}
+#| component: valuebox
+list(  title="v18",  value="24",  color="blue")
+```
+

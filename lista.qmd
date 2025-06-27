@@ -1,0 +1,25 @@
+---
+format: dashboard
+---
+
+```{r}
+#| echo: false
+#| include: false
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+dane=read_excel("p_2025.xlsx",sheet="2025")
+dane$Uczelnia <- factor(dane$Uczelnia, levels = dane$Uczelnia[order(dane$Rank_25)])
+```
+
+
+```{r}
+#| echo: false
+library(DT)
+df <- as.data.frame(dane)
+datatable(df[,c(3,9,40:69)], options = list(scrollX = TRUE, width = "100%"))
+```
+
+
+
+

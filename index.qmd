@@ -1,0 +1,93 @@
+---
+title: "Perspektywy2025"
+---
+
+Najnowszy ranking uczelni akademickich zob. [Ranking](https://2025.ranking.perspektywy.pl/)
+
+Na kolejnych zakładkach przedstawiono:
+
+**Lista** - pełny ranking z punktami dla poszczególnych kategorii. Mozliwe jest sortowanie według wybranej kategorii, a także filtrowanie np. "**ekono**"
+
+**Wykres** - Ranking uwzględniajacy uczelnie z miejsc 1-36 oraz dodatkowo trzy Uniwersytety Ekonomiczne
+
+**Ranking** - Zestaw wykresów dla poszczególnych kategorii dla wszystkich uczelni z uwzględnieniem grup kategorii
+
+**Ekonomiczne** - Zestaw wykresów dla poszczególnych kategorii dla uczelni ekonomicznych z uwzględnieniem grup kategorii
+
+**Podsumowanie** - Wybrane wnioski
+
+**Kategorie:**
+
+::: {.callout-note title="Prestiż (12%)" collapse="true"}
+Ocena przez kadrę akademicką (10%)
+
+Uznanie międzynarodowe (2%)
+:::
+
+::: {.callout-note title="Absolwenci na rynku pracy - 12%" collapse="true"}
+Wynagrodzenia absolwentów (6%)
+
+Wynagrodzenia absolwentów (6%)
+:::
+
+::: {.callout-note title="Potencjał naukowy - 13%" collapse="true"}
+Ocena parametryczna (8%)
+
+Nasycenie kadry osobami o najwyższych kwalifikacjach (2%)
+
+Uprawnienia doktorskie i habilitacyjne (1%)
+
+Kształcenie doktorantów w szkołach doktorskich (2%)
+:::
+
+::: {.callout-note title="Efektywność naukowa – 30%" collapse="true"}
+Efektywność pozyskiwania środków finansowych na badania (5%)
+
+Środki pozyskane z programów ramowych UE na rzecz badań naukowych i innowacyjności (4%)
+
+Rozwój kadry własnej (3%)
+
+Nadane stopnie naukowe (3%)
+
+Publikacje (3%)
+
+FWCI (5%)
+
+FWVI (3%)
+
+Top 10 (4%)
+:::
+
+::: {.callout-note title="Innowacyjność - 8%" collapse="true"}
+Patenty i prawa ochronne w Polsce (3%)
+
+Patenty i prawa ochronne za granicą (3%)
+
+SDG (2%)
+:::
+
+::: {.callout-note title="Warunki kształcenia - 10%" collapse="true"}
+Dostępność kadr wysokokwalifikowanych (5%)
+
+Akredytacje (5%)
+:::
+
+::: {.callout-note title="Umiędzynarodowienie - 15%" collapse="true"}
+Studenci cudzoziemcy (3%)
+
+Studiujący w językach obcych (3%)
+
+ICI (International Collaboration Impact) (2%)
+
+Uczestnictwo w uniwersytecie europejskim (1%)
+
+Nauczyciele akademiccy z zagranicy (1%)
+
+Wymiana kadry akademickiej (wyjazdy) w ramach Programu Erasmus+ (1%)
+
+Wymiana studencka (wyjazdy) (1,5%)
+
+Wymiana studencka (przyjazdy) (1,5%)
+
+Wielokulturowość środowiska studenckiego (1%)
+:::

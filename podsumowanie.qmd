@@ -1,0 +1,150 @@
+---
+title: "Podsumowanie"
+---
+
+Ranking Perpektywy 2025
+
+Tabela. Zysk punktowy w Rankingu przy poprawie naszej punktacji w danej kategorii o 10% lub 50%.
+
+
+
+```{r}
+#| echo: false
+#| eval: true
+#| message: false
+
+library(knitr) # Do tworzenia tabel w R Markdown
+library(dplyr) # Pomocniczo do manipulacji danymi
+
+# Tworzenie ramki danych na podstawie danych z nowego obrazka
+df_table <- data.frame(
+  Zmienna = c(
+    "Ocena przez kadrę akademicką",
+    "Uznanie międzynarodowe",
+    "Wynagrodzenie absolwentów",
+    "Zatrudnienie absolwentów",
+    "Ocena parametryczna",
+    "Nasycenie kadry osobami o najwyższych kwalifikacjach",
+    "Uprawnienia habilitacyjne i doktorskie",
+    "Kształcenie doktorantów",
+    "Patenty, prawa ochronne w Polsce",
+    "Patenty, prawa ochronne za granicą",
+    "SDG",
+    "Efektywność pozyskiwania zewnętrznych środków finansowych na badania i rozwój",
+    "Efektywność pozyskiwania zewnętrznych środków z programów UE",
+    "Rozwój kadry własnej",
+    "Nadane stopnie i tytuły naukowe",
+    "Publikacje",
+    "FWCI",
+    "FWVI",
+    "TOP 10",
+    "Dostępność dla studentów kadr wysoko-kwalifikowanych",
+    "Akredytacje",
+    "Studenci cudzoziemcy",
+    "Studiujący w językach obcych",
+    "ICI",
+    "Uniwersytety europejskie",
+    "Nauczyciele akademiccy z zagranicy",
+    "Wymiana kadry",
+    "Wymiana studencka - wyjazdy",
+    "Wymiana studencka - przyjazdy",
+    "Wielokulturowość środowiska studenckiego",
+    "Suma" # Dodany wiersz dla sumy
+  ),
+  `Wzrost o 10%` = c(
+    0.06, 0.02, 0.39, 0.44, 0.46, 0.12, 0.01, 0.10, 0.00, 0.00,
+    0.11, 0.24, 0.12, 0.06, 0.07, 0.06, 0.22, 0.12, 0.17, 0.16,
+    0.12, 0.03, 0.08, 0.07, 0.10, 0.00, 0.10, 0.05, 0.03, 0.00,
+    3.54 # Wartość sumy z obrazka
+  ),
+  `Wzrost o 50%` = c(
+    0.31, 0.10, 1.95, 2.22, 2.29, 0.61, 0.04, 0.51, 0.00, 0.00,
+    0.57, 1.18, 0.60, 0.31, 0.37, 0.32, 1.12, 0.61, 0.84, 0.80,
+    0.62, 0.15, 0.40, 0.35, 0.50, 0.00, 0.50, 0.25, 0.17, 0.01,
+    17.68 # Wartość sumy z obrazka
+  ),
+  check.names = FALSE # Ważne, aby zachować nazwy kolumn z %
+)
+
+# Wyświetl tabelę w formacie R Markdown
+kable(df_table, format = "markdown")
+
+```
+
+
+
+
+**Wyjaśnienie:** dla zmiennej **Nadane stopnie i tytuły naukowe**
+
+Jeśli np. nadanych zostało 7 stopni doktora (7p) i 2 stopnie dra hab. (3p), to wzrost o 10% oznacza nadanie np. 11 stopni doktora (ewentualnie np. .8 stopni doktora i 2 stopni dra hab.).
+
+<br>
+
+**Dane z Komitetów Naukowych:**
+
+**Rok 2023:** habilitacje: 1 (1,5p), doktoraty: 19 (19p). Liczba punktów: 20,5.
+
+**Rok 2024:** habilitacje: 0, doktoraty: 18. Liczba punktów: 18.
+
+**Rok 2025:** (przewidywane): habilitacje: 4, doktoraty: 10. Liczba punktów: 16.
+
+Co dałoby spadek w tej kategorii (2025 do 2024) o ok. 11%
+
+<br>
+
+<br>
+
+Elastyczność
+
+Zwiększamy naszą punktację (efekty) w danej kategorii o x % (10 lub 50) – jaki jest zysk w finalnej punktacji (wpływa na to aktualna liczba punktów oraz waga kategorii).
+
+<hr>
+
+Najbardziej „zyskowne”
+
+**Ocena parametryczna**
+
+ – wzrost o 10% daje nam zwiększenie punktacji o 0,46, a wzrost o 50% aż o 2,29p.
+
+**Zatrudnienie absolwentów**
+
+– wzrost o 10% daje nam zwiększenie punktacji o 0,44, a wzrost o 50% aż o 2,22p.
+
+**Wynagrodzenia absolwentów**
+
+– wzrost o 10% daje nam zwiększenie punktacji o 0,39, a wzrost o 50% o 1,95p.
+
+
+Stosunkowo zyskowne są dla nas jeszcze następujące kategorie (powyżej 0,1 pkt. za wzrost o 10%):
+
+**Efektywność pozyskiwania zewnętrznych środków finansowych na badania i rozwój** (zysk 0,24)
+
+**Nasycenie kadry osobami o najwyższych kwalifikacjach** (0,12)
+
+**Efektywność pozyskiwania zewnętrznych środków z programów UE** (zysk 0,12)
+
+**Nadane stopnie i tytuły**                           (0,109)
+
+**FWCI**                                             (0,22)
+
+**FWVI**                                             (0,12)
+
+**Top10**                                            (0,17)
+
+**Dostępność dla studentów**                     (0,16)
+
+**Akredytacje**                     (0,12)
+
+Warto zauważyć, że większość powyższych kategorii jest związana z nauką, publikacjami, grantami. To w pewnej mierze sprzedaż wiązana. Pozyskujemy granty, są publikacje, są cytowania itd. Zyskujemy jednocześnie w wielu kategoriach.
+
+Wzrost w każdej kategorii o 10% daje nam  3,54 punktu. Dałoby to aktualnie miejsce 48.
+
+Wzrost w każdej kategorii o 50% daje nam 17,68 pkt. Dałoby to aktualnie miejsce 19.
+
+Na niektóre ze zmiennych nie mamy aktualnie wpływu (np. **Ewaluacja działalności naukowej**). Za rok jeszcze (?) punkty będą takie same. Podobnie **Uprawnienia habilitacyjne i doktorskie.**
+
+**Wynagrodzenia** i **Zatrudnienie** absolwentów to efekt naszej pracy, ale jednak pośredni i opóźniony.
+
+**Do miejsca 50. brakuje nam 1,2 pkt.** Wzrosty w każdej kategorii o ok. 2% dawałby 50 miejsce.
+
+

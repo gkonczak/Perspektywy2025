@@ -1,0 +1,42 @@
+---
+format: 
+  dashboard:
+    orientation: rows
+---
+
+
+```{r}
+#| echo: false
+#| include: false
+library(readxl)
+library(tidyverse)
+```
+
+```{r}
+#| echo: false
+#| include: false
+dane=read_excel("p_2025.xlsx",sheet="2025")
+dane$Uczelnia <- factor(dane$Uczelnia, levels = dane$Uczelnia[order(-dane$Rank_25)])
+
+d1=dane %>% 
+  filter(ind=="UE")
+
+dane2=dane[c(1:36,41,43,44,58),]
+nazwy=names(d1)
+```
+
+
+```{r}
+#| echo: false
+#| title: Wykres
+# #| fig-height: 30
+#| fig-width: 20
+
+ggplot(dane2, aes(x = Uczelnia, y = Rank_25, fill = kolor)) +
+  geom_bar(stat = "identity") +
+  labs(x="",y="Rank_25", title="Miejsca 1-36 plus ekonomiczne")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1,size=4),axis.text.y = element_text(size = 4))+
+    scale_fill_identity()
+
+```
+
